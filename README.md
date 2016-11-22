@@ -43,7 +43,7 @@ In addition,
 MIT © [DoSomething.org]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-gambit.svg
-[npm-url]: https://npmjs.org/package/generator-gambit
+[npm-image]: https://badge.fury.io/js/%40dosomething%2Fgenerator-gambit.svg
+[npm-url]: https://www.npmjs.com/package/@dosomething/generator-gambit
 [daviddm-image]: https://david-dm.org/@dosomething/generator-gambit.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/@dosomething/generator-gambit
