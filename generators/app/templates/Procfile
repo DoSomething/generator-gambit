@@ -1,0 +1,2 @@
+<%if (data.web) {%>web: node leaders/web.js<%}%>
+<%if (data.worker) {%>worker: node leaders/worker.js<%}%>

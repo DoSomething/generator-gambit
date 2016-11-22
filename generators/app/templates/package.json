@@ -1,0 +1,29 @@
+{
+  "name": "<%= data.name %>",
+  "version": "1.0.0",
+  "description": "<%= data.description %>",
+  "scripts": {
+    "test": "mocha",
+    "start": "foreman start",
+    "lint": "eslint --ext=.js leaders followers lib util"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    <%if (data.web) { %>"body-parser": "^1.15.2",
+    "express": "^4.14.0",<% } %>
+    <%if (data.rabbit) { %>"amqplib": "^0.5.1",<% } %>
+    <%if (data.mongo) { %>"mongoose": "^4.6.8",<% } %>
+    "forky": "^0.3.0",
+    "keypunch": "^1.0.3",
+    "bluebird": "^3.4.6"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0",
+    "supertest": "^2.0.1",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "eslint": "^3.10.2",
+    "@dosomething/eslint-config": "^1.1.1"
+  }
+}

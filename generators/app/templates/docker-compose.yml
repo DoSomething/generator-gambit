@@ -1,0 +1,26 @@
+version: "2"
+
+services:
+  app:
+    build: ./
+    links:
+      <%if (data.mongo) { %>- mongo<% } %>
+      <%if (data.rabbit) { %>- rabbitmq<% } %>
+    environment:
+      - RABBIT_URI=amqp://rabbitmq_1:5672/dosomething
+      - MONGO_URI=mongodb://mongo_1:27017/<%= data.name %>
+    volumes:
+      - ./:/app
+<%if (data.rabbit) { %>
+  rabbitmq:
+    image: rabbitmq:latest
+    ports:
+      - "5672:5672"
+    environment:
+      RABBITMQ_DEFAULT_VHOST: 'dosomething'
+<% } %><%if (data.mongo) { %>
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+<% } %>
