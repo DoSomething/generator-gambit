@@ -1,13 +1,8 @@
 {
-  "name": "generator-gambit",
-  "version": "0.0.0",
+  "name": "@dosomething/generator-gambit",
+  "version": "0.1.1",
   "description": "Scaffolding for new Gambit services",
   "homepage": "",
-  "author": {
-    "name": "deadlybutter",
-    "email": "joe@dosomething.org",
-    "url": ""
-  },
   "files": [
     "generators"
   ],

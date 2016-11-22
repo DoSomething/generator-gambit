@@ -7,7 +7,7 @@ First, install [Yeoman](http://yeoman.io) and generator-gambit using [npm](https
 
 ```bash
 npm install -g yo
-npm install -g generator-gambit
+npm install -g @dosomething/generator-gambit
 ```
 
 Then generate your new project:
