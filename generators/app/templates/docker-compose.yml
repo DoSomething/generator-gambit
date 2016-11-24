@@ -11,6 +11,7 @@ services:
       - MONGODB_URI=mongodb://mongo_1:27017/<%= data.name %>
     volumes:
       - ./:/app
+      - /app/node_modules      
 <%if (data.rabbit) { %>
   rabbitmq:
     image: rabbitmq:latest
