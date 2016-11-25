@@ -1,7 +1,5 @@
 const console = require('../util/configureLogger')();
-<%if (data.mongo) { %>
-// const mongo = require('../lib/mongo');
-<% } %>
+
 const express = require('express');
 const app = express();
 

@@ -104,21 +104,28 @@ module.exports = yeoman.Base.extend({
     );
 
     this.fs.copy(
+      this.templatePath('./util/stathat.js'),
+      this.destinationPath('./util/stathat.js')
+    );
+
+    this.fs.copy(
       this.templatePath('./test/example.js'),
       this.destinationPath('./test/example.js')
     );
 
     if (this.props.rabbit) {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('./lib/rabbit.js'),
-        this.destinationPath('./lib/rabbit.js')
+        this.destinationPath('./lib/rabbit.js'),
+        {data: this.props}
       );
     }
 
     if (this.props.mongo) {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('./lib/mongo.js'),
-        this.destinationPath('./lib/mongo.js')
+        this.destinationPath('./lib/mongo.js'),
+        {data: this.props}
       );
     }
 

@@ -1,4 +1,5 @@
 const console = require('keypunch');
+const stathat = require('../util/stathat');
 
 let connection = {};
 
@@ -10,10 +11,12 @@ makeConnection();
 
 function onError(err) {
   console.error('Rabbit Error', err);
+  stathat.value('<%= data.name %> rabbit error', err.code);
   setTimeout(makeConnection, 2000);
 }
 
 function onMessage(channel, message, callback) {
+  stathat.count('<%= data.name %> recieved rabbit message', 1);
   if (message !== null) {
     callback(message.content.toString());
     channel.ack(message);

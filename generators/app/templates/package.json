@@ -16,7 +16,8 @@
     <%if (data.mongo) { %>"mongoose": "^4.6.8",<% } %>
     "forky": "^0.3.0",
     "keypunch": "^1.0.3",
-    "bluebird": "^3.4.6"
+    "bluebird": "^3.4.6",
+    "stathat": "^0.0.8"
   },
   "devDependencies": {
     "dotenv": "^2.0.0",
